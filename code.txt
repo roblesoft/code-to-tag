@@ -1,0 +1,74 @@
+<span class ='reserver'>import</span>
+<span class ='var'>javax</span>
+<span class ='limits'>.</span>
+<span class ='var'>swing</span>
+<span class ='limits'>.</span>
+<span class ='limits'>;</span>
+<br>
+<span class ='reserver'>public</span>
+<span class ='reserver'>class</span>
+<span class ='var'>program</span>
+<span class ='limits'>{</span>
+<br>
+<span class ='reserver'>public</span>
+<span class ='reserver'>static</span>
+<span class ='reserver'>void</span>
+<span class ='func'>main</span>
+<span class ='limits'>(</span>
+<span class ='reserver'>String</span>
+<span class ='limits'>[</span>
+<span class ='limits'>]</span>
+<span class ='var'>args</span>
+<span class ='limits'>)</span>
+<span class ='limits'>{</span>
+<br>
+<span class ='tab'>----</span>
+<span class ='tab'>----</span>
+<span class ='var'>System</span>
+<span class ='limits'>.</span>
+<span class ='var'>out</span>
+<span class ='limits'>.</span>
+<span class ='func'>println</span>
+<span class ='limits'>(</span>
+<span class ='signs'>"</span>
+<span class ='signs'>"hello word"</span>
+<span class ='var'>hello</span>
+<span class ='var'>word"</span>
+<span class ='signs'>"</span>
+<span class ='limits'>)</span>
+<span class ='limits'>;</span>
+<br>
+<span class ='tab'>----</span>
+<span class ='tab'>----</span>
+<span class ='var'>hola</span>
+<span class ='signs'>+</span>
+<span class ='signs'>=</span>
+<span class ='limits'>3</span>
+<br>
+<span class ='tab'>----</span>
+<span class ='tab'>----</span>
+<span class ='reserver'>for</span>
+<span class ='limits'>(</span>
+<span class ='var'>i</span>
+<span class ='signs'>=</span>
+<span class ='limits'>0</span>
+<span class ='limits'>;</span>
+<span class ='var'>i</span>
+<span class ='signs'>=</span>
+<span class ='limits'>0</span>
+<span class ='limits'>;</span>
+<span class ='var'>i++</span>
+<span class ='signs'>+</span>
+<span class ='signs'>+</span>
+<span class ='limits'>)</span>
+<span class ='limits'>{</span>
+<br>
+<span class ='tab'>----</span>
+<span class ='tab'>----</span>
+<span class ='limits'>}</span>
+<br>
+<span class ='tab'>----</span>
+<span class ='limits'>}</span>
+<br>
+<span class ='limits'>}</span>
+<br>
