@@ -1,74 +1,57 @@
-<span class ='reserver'>import</span>
-<span class ='var'>javax</span>
-<span class ='limits'>.</span>
-<span class ='var'>swing</span>
-<span class ='limits'>.</span>
-<span class ='limits'>;</span>
-<br>
-<span class ='reserver'>public</span>
-<span class ='reserver'>class</span>
-<span class ='var'>program</span>
-<span class ='limits'>{</span>
-<br>
-<span class ='reserver'>public</span>
-<span class ='reserver'>static</span>
-<span class ='reserver'>void</span>
-<span class ='func'>main</span>
-<span class ='limits'>(</span>
-<span class ='reserver'>String</span>
-<span class ='limits'>[</span>
-<span class ='limits'>]</span>
-<span class ='var'>args</span>
-<span class ='limits'>)</span>
-<span class ='limits'>{</span>
-<br>
-<span class ='tab'>----</span>
-<span class ='tab'>----</span>
-<span class ='var'>System</span>
-<span class ='limits'>.</span>
-<span class ='var'>out</span>
-<span class ='limits'>.</span>
-<span class ='func'>println</span>
-<span class ='limits'>(</span>
-<span class ='signs'>"</span>
-<span class ='signs'>"hello word"</span>
-<span class ='var'>hello</span>
-<span class ='var'>word"</span>
-<span class ='signs'>"</span>
-<span class ='limits'>)</span>
-<span class ='limits'>;</span>
-<br>
-<span class ='tab'>----</span>
-<span class ='tab'>----</span>
-<span class ='var'>hola</span>
-<span class ='signs'>+</span>
-<span class ='signs'>=</span>
-<span class ='limits'>3</span>
-<br>
-<span class ='tab'>----</span>
-<span class ='tab'>----</span>
-<span class ='reserver'>for</span>
-<span class ='limits'>(</span>
-<span class ='var'>i</span>
-<span class ='signs'>=</span>
-<span class ='limits'>0</span>
-<span class ='limits'>;</span>
-<span class ='var'>i</span>
-<span class ='signs'>=</span>
-<span class ='limits'>0</span>
-<span class ='limits'>;</span>
-<span class ='var'>i++</span>
-<span class ='signs'>+</span>
-<span class ='signs'>+</span>
-<span class ='limits'>)</span>
-<span class ='limits'>{</span>
-<br>
-<span class ='tab'>----</span>
-<span class ='tab'>----</span>
-<span class ='limits'>}</span>
-<br>
-<span class ='tab'>----</span>
-<span class ='limits'>}</span>
-<br>
-<span class ='limits'>}</span>
-<br>
+<style>.tab{color: #222526} .reserver{color: #FC4349 } .limits{color:#FFF} .var{color:#B2FF55} .func{color:#00E4ED} .signs{color:#FC4349} .string{color:#EAFF11} .codigo{background-color: #222526; padding: 10%;}</style>>
+<code>
+	<div class="codigo">
+		<span class ='reserver'>import</span>
+		<span class ='var'>javax</span>
+		<span class ='limits'>.</span>
+		<span class ='var'>swing</span>
+		<span class ='limits'>.</span>
+		<span class ='limits'>;</span>
+		<br>
+		<span class ='reserver'>public</span>
+		<span class ='reserver'>class</span>
+		<span class ='var'>hola</span>
+		<span class ='limits'>{</span>
+		<br>
+		<span class ='tab'>----</span>
+		<span class ='reserver'>public</span>
+		<span class ='reserver'>static</span>
+		<span class ='reserver'>void</span>
+		<span class ='func'>main</span>
+		<span class ='limits'>(</span>
+		<span class ='reserver'>String</span>
+		<span class ='limits'>[</span>
+		<span class ='limits'>]</span>
+		<span class ='var'>args</span>
+		<span class ='limits'>)</span>
+		<span class ='limits'>{</span>
+		<br>
+		<span class ='tab'>----</span>
+		<span class ='tab'>----</span>
+		<span class ='reserver'>String</span>
+		<span class ='limits'>;</span>
+		<br>
+		<span class ='tab'>----</span>
+		<span class ='tab'>----</span>
+		<span class ='var'>entrada</span>
+		<span class ='signs'>=</span>
+		<span class ='var'>JOptionPane</span>
+		<span class ='limits'>.</span>
+		<span class ='func'>showInputDialog</span>
+		<span class ='limits'>(</span>
+		<span class ='string'>"</span>
+		<span class ='string'>"ingrese una cantidad"</span>
+		<span class ='var'>ingrese</span>
+		<span class ='var'>una</span>
+		<span class ='var'>cantidad"</span>
+		<span class ='string'>"</span>
+		<span class ='limits'>)</span>
+		<span class ='limits'>;</span>
+		<br>
+		<span class ='tab'>----</span>
+		<span class ='limits'>}</span>
+		<br>
+		<span class ='limits'>}</span>
+		<br>
+	</div>
+</code>
