@@ -2,9 +2,10 @@ code = open('code.txt', 'w')
 all_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 limits = '()[]{}.;1234567890'
 signs = '-+*/='
+ind = 0
 caracter = '() =.\t[]{}'
 reserver_words = ['for', 'if', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'float', 'public', 'static', 'void', 'class']
-code.write("<style>.tab{color: #222526} .reserver{color: #FC4349 } .limits{color:#FFF} .var{color:#B2FF55} .func{color:#00E4ED} .signs{color:#FC4349} .string{color:#EAFF11} .codigo{background-color: #222526; padding: 10%;}</style>\n")
+code.write("<style>.tab{color: #222526} .reserver{color: #FC4349 } .limits{color:#FFF} .var{color:#B2FF55} .func{color:#00E4ED} .signs{color:#FC4349} .string{color:#EAFF11} .codigo{background-color: #222526; padding: 10%; border-radius: 10px} .ind{color:grey}</style>\n")
 tag = "<code>\n"
 code.write(tag)
 tag = '\t<div class="codigo">\n'
@@ -13,6 +14,9 @@ for line in open('input.txt'):
     end = 0
     line_of_code = line.replace("\n","")
     char = line_of_code
+    ind += 1
+    indi = '\t\t<span class="ind">{}</span>\n'. format(ind)
+    code.write(indi)
     for j in range(len(line_of_code)):        
         if char[j] == '\t':
             word = "----"
