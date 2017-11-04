@@ -7,7 +7,7 @@ caracter = '() =.\t[]{};+-,'
 ends = '() = \t{};-+'
 reserver_words = ['for', 'if', 'new', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'float', 'public', 'static', 'void', 'class', 'null']
 code.write("<style>.tab{color: #222526} .reserver{color: #FC4349 } .limits{color:#FFF} .var{color:#ADD96C} .func{color:#00E4ED} .signs{color:#FC4349} .string{color:#EAFF11} .codigo{background-color: #222526; padding: 10%; border-radius: 10px} .ind{color:grey}</style>\n")
-code.write("<!--code by roblesoft, github.com/roblesoft-->")
+code.write("<!--code by roblesoft, github.com/roblesoft-->\n")
 tag = "<code>\n"
 code.write(tag)
 tag = '\t<div class="codigo">\n'
@@ -33,7 +33,7 @@ for line in open('input.txt'):
             tag = "<span class ='limits'>{}</span>". format(word)
             code.write(tag)
         elif char[j] == ' ' and rel == False:
-            word = '-'
+            word = ' '
             tag = "<span class ='tab'>{}</span>". format(word)
             code.write(tag)
         elif char[j] in signs and rel == False:
@@ -77,7 +77,7 @@ for line in open('input.txt'):
         if j + 1 == len(line_of_code):
             tag = "<br>"
             code.write(tag)
-tag = "\t</div>\n"
+tag = "\n\t</div>\n"
 code.write(tag)
 tag = "</code>"
 code.write(tag)
