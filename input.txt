@@ -1,9 +1,28 @@
-import javax.swing.JOptionPane;
-public class hola{
+import javax.swing.JOptionpane;
+public class matrices{
 	public static void main(String[] args){
-		String entrada;
-		entrada = JOptionPane.showInputDialog("ingrese una cantidad");
-
+		String input, message ="";
+		int i, j, n, m;
+		int[][] A;
+		input = JOptionPane.showInputDialog("Ingrese el numero de filas");
+		n = Integer.parseInt(input);
+		input = JOptionPane.showInputDialog("Ingrese el numero de columnas");
+		m = Integer.parseInt(input);
+		A = new int[n][m];
+		for(i = 0; i < n; i++){
+			for(j = 0; j < m; j++){
+				input = JOptionPane.showInputDialog("A[" +(i+1)+"]["+(j+1)+"]=");
+				A[i][j] = Integer.parseInt(input);
+			}
+		}
+		for(i = 0; i < n; i++){
+	    		for(j = 0; j < m; j++){
+				message = message + A[i][j] + ",";
+			}
+			message = message.substring(0,message.length() - 1);
+			message += ".\n";
+		}
+		JOptionPane.showMessageDialog(null, message);
 	}
 }
 
