@@ -1,31 +1,36 @@
-//nombre: uriel eduardo robles nava matricula:1681991
-import javax.swing.JOptionpane;
-public class matrices{
-	public static void main(String[] args){
-		String input, message ="";
-		int i, j, n, m;
-		int[][] A;
-		input = JOptionPane.showInputDialog("Ingrese el numero de filas");
-		n = Integer.parseInt(input);
-		input = JOptionPane.showInputDialog("Ingrese el numero de columnas");
-		m = Integer.parseInt(input);
-		A = new int[n][m];
-		for(i = 0; i < n; i++){
-			for(j = 0; j < m; j++){
-				input = JOptionPane.showInputDialog("A[" +(i+1)+"]["+(j+1)+"]=");
-				A[i][j] = Integer.parseInt(input);
-			}
-		}
-		//hola
-		for(i = 0; i < n; i++){
-	    		for(j = 0; j < m; j++){
-				message = message + A[i][j] + ",";
-			}
-			message = message.substring(0,message.length() - 1);
-			message += ".\n";
-			message += "hola";
-		}
-		JOptionPane.showMessageDialog(null, message);
-	}
+// Nombre: Uriel Eduardo Robles Nava
+// Matricula: 168199
+// Materia: Lenguajes de programación
+//programa hecho en codtag
+float datos[50], promedio, suma, sumatoria, desviacion;
+int i, n;
+int main(int argc, char const *argv[]) {
+	leerNumero(datos);
+	promedioTotal(datos);
+	desviacionEstandar(datos);
+  	return 0;
 }
-
+void leerNumero(float a[max]){
+	printf("Digite el numero de elementos\n");
+	scanf("%i",&n);
+	for( i = 0 ; i < n ; i++){
+		printf("Digite el 62626dato [%i]\n", i + 1);
+		scanf("%f",&a[i]);
+  	}
+}
+void promedioTotal(float a[max]){
+	suma = 0;
+	for(i = 0; i < n ; i++){
+		suma += a[i];
+	}
+	promedio = suma / n;
+	printf("El promedio es: %f\n", promedio);
+}
+void desviacionEstandar(float a[max]){
+	sumatoria = 0;
+	for( i = 0 ; i < n ; i ++){
+		sumatoria += pow(a[i] - promedio,2);
+	}
+	desviacion = sqrt(sumatoria/n);
+	printf("La desviacion estandar es: %f\n", desviacion );
+}

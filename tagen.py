@@ -1,18 +1,20 @@
 code = open('code.txt', 'w')
-all_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-limits = '()[]{}.,;1234567890'
+all_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&'
+limits = '()[]{}.,;'
+numbers = '0123456789'
 signs = '-+*/=<>'
 ind = 0
-caracter = '() =.\t[]{};+-,'
-ends = '() = \t{};-+'
-reserver_words = ['for', 'if', 'new', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'float', 'public', 'static', 'void', 'class', 'null']
+caracter = '() =.\t[]{};+-,/'
+ends = '() = \t{};-+,'
+reserver_words = ['for', 'if', 'new', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'float', 'public', '&', 'static', 'void', 'class', 'null']
 code.write("<!--code by roblesoft, github.com/roblesoft-->\n")
-code.write("<style>.tab{color: #222526} .reserver{color: #FC4349 } .limits{color:#FFF} .var{color:#ADD96C} .func{color:#00E4ED} .signs{color:#FC4349} .string{color:#EAFF11} .codigo{background-color: #222526; padding: 10%; border-radius: 10px} .ind{color:grey} .coment{color:grey}</style>\n")
+code.write("<style>.reserver{color: #FF3109} .limits{color:#FFFFFF} .var{color:#00FF87} .func{color:#10FFFF} .signs{color:#FF0DFF} .string{color:#FFFE02} .codigo{background-color: #222526; padding: 10%; border-radius: 10px} .ind{color:grey} .coment{color:grey} .numbers{ color:#34A5FF}</style>\n")
 tag = "<code>\n"
 code.write(tag)
 tag = '\t<div class="codigo">\n'
 code.write(tag)
 rel = False
+coment = False
 for line in open('input.txt'):
     end = 0
     line_of_code = line.replace("\n","")
@@ -23,13 +25,13 @@ for line in open('input.txt'):
     else:
         indi = '<span class="ind">{}</span>'. format(ind)
     code.write(indi)
-    word = '---'
-    tag = "<span class ='tab'>{}</span>". format(word)
+    word = '&nbsp;&nbsp;&nbsp;'
+    tag = "<span>{}</span>". format(word)
     code.write(tag)
     for j in range(len(line_of_code)):        
         if char[j] == '\t':
-            word = "----"
-            tag = "<span class ='tab'>{}</span>". format(word)
+            word = "&nbsp;&nbsp;&nbsp;&nbsp;"
+            tag = "<span>{}</span>". format(word)
             code.write(tag)
         elif char[j] == '/' and char[j+1] == '/':
             coment = True
@@ -40,8 +42,8 @@ for line in open('input.txt'):
             tag = "<span class ='limits'>{}</span>". format(word)
             code.write(tag)
         elif char[j] == ' ' and rel == False and coment == False:
-            word = ' '
-            tag = "<span class ='tab'>{}</span>". format(word)
+            word = '&nbsp;'
+            tag = "<span>{}</span>". format(word)
             code.write(tag)
         elif char[j] in signs and rel == False and coment == False:
             word = char[j: j+1]
@@ -50,7 +52,7 @@ for line in open('input.txt'):
         elif char[j] == '"':
             gat = 0
             rel = True
-            if char[j+1] == ';' or char[j+1] == ')' or char[j+1] == '+' or char[j+1] == ' ':
+            if char[j+1] == ';' or char[j+1] == ')' or char[j+1] == '+' or char[j+1] == ' ' or char[j+1] == ',':
                 rel = False
                 continue
             for w in range(j, len(line_of_code)):
@@ -76,6 +78,18 @@ for line in open('input.txt'):
                     else:
                         word = string
                         tag = "<span class ='var'>{}</span>". format(word)
+                    code.write(tag)
+                    break
+                end += 1
+        elif char[j] in numbers and rel == False and coment == False:
+            end = 0
+            if char[j-1] in numbers:
+                continue
+            for i in range(j, len(line_of_code)):
+                if char[i] in caracter:
+                    string = line_of_code[j:j+end]
+                    word = string
+                    tag = "<span class ='numbers'>{}</span>". format(word)
                     code.write(tag)
                     break
                 end += 1
