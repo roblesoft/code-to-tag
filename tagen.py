@@ -6,9 +6,9 @@ signs = '-+*/=<>'
 ind = 0
 caracter = '() =.\t[]{};+-,/'
 ends = '() = \t{};-+,'
-reserver_words = ['for', 'if', 'new', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'float', 'public', '&', 'static', 'void', 'class', 'null']
+reserver_words = ['for', 'if', 'new', 'import', 'while', 'do', 'JOptionpane', 'else', 'int', 'String', 'char', 'True', 'False', 'float', 'public', '&', 'static', 'void', 'class', 'null']
 code.write("<!--code by roblesoft, github.com/roblesoft-->\n")
-code.write("<style>.reserver{color: #FF3109} .limits{color:#FFFFFF} .var{color:#00FF87} .func{color:#10FFFF} .signs{color:#FF0DFF} .string{color:#FFFE02} .codigo{background-color: #222526; padding: 10%; border-radius: 10px} .ind{color:grey} .coment{color:grey} .numbers{ color:#34A5FF}</style>\n")
+code.write("<style>.reserver{color: #FF3109} .limits{color:#FFFFFF} .var{color:#00FF87} .func{color:#10FFFF} .signs{color:#FF0DFF} .string{color:#FFFE02} .codigo{background-color: #222526; padding: 5% 10%; border-radius: 10px} .ind{color:grey; -webkit-user-select: none; -moz-user-select: none;-khtml-user-select: none; -ms-user-select:none;} .coment{color:grey} .numbers{ color:#34A5FF}</style>\n")
 tag = "<code>\n"
 code.write(tag)
 tag = '\t<div class="codigo">\n'
@@ -17,7 +17,7 @@ rel = False
 coment = False
 for line in open('input.txt'):
     end = 0
-    line_of_code = line.replace("\n","")
+    line_of_code = line.replace("\n"," ")
     char = line_of_code
     ind += 1
     if ind == 1:
@@ -93,12 +93,9 @@ for line in open('input.txt'):
                     code.write(tag)
                     break
                 end += 1
-        elif char[j] == ' ':
-            continue
-        if j + 1 == len(line_of_code):
-            coment = False
-            tag = "<br>"
-            code.write(tag)
+    coment = False
+    tag = "<br>"
+    code.write(tag)
 tag = "\n\t</div>\n"
 code.write(tag)
 tag = "</code>"
