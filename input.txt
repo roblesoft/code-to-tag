@@ -1,44 +1,39 @@
-// Nombre: Uriel Eduardo Robles Nava
-// Matricula: 168199
-// Materia: Lenguajes de programación
-//programa hecho en codtag
-float datos[50], promedio, suma, sumatoria, desviacion;
-int i, n;
-int main(int argc, char const *argv[]) {
-	leerNumero(datos);
-	promedioTotal(datos);
-	desviacionEstandar(datos);
-  	return 0;
-}
-void leerNumero(float a[max]){
-	printf("Digite el numero de elementos\n");
-	scanf("%i",&n);
-	for( i = 0 ; i < n ; i++){
-		printf("Digite el 62626dato [%i]\n", i + 1);
-		scanf("%f",&a[i]);
-  	}
-}
-
-
-void promedioTotal(float a[max]){
-	suma = 0;
-	for(i = 0; i < n ; i++){
-		suma += a[i]
+import javax.swing.JOptionPane;
+public class Usoswitch{
+	public static void main(String[] args){
+		String entrada, menu = "", entra, var = "";
+		menu = "menu de opciones\n";
+		menu += "1.- lista de numero naturales\n";
+		menu += "2.- suma de numeros naturales \n";
+		menu += "3.- salir\n";
+		int i, n, sumatoria = 0, opc;
+		entra = JOptionPane.showInputDialog(menu + "ingrese opcion");
+		opc = Integer.parseInt(entra);
+		while(opc < 3){
+			n_3 = 11110.100;
+			sumatoria = 0;
+			var = "";
+			switch(opc){                                                                                                                                               
+				case 1:{
+					entrada = JOptionPane.showInputDialog("ingrese numero");
+					n = Integer.parseInt(entrada);
+					for(i = 0; i < n; i++){
+						var = var + i + " , ";
+					}
+					var = var + i + ".";
+					JOptionPane.showMessageDialog(null, var);
+					break;
+				}
+				case 2:{
+					entrada = JOptionPane.showInputDialog("ingrese numero");
+					n = Integer.parseInt(entrada);
+					for(i = 0; i <= n; i++){
+						sumatoria += i;
+					}
+					JOptionPane.showMessageDialog(null, sumatoria);	
+					break;
+				}
+			}
+		}
 	}
-	promedio = suma / n;
-	printf("El promedio es: %f\n", promedio);
-}
-void desviacionEstandar(float a[max]){
-	sumatoria = 0;
-	for( i = 0 ; i < n ; i ++){
-		sumatoria += pow(a[i] - promedio,2);
-	}
-	desviacion = sqrt(sumatoria/n);
-	printf("La desviacion estandar es: %f\n", desviacion );
-	do{
-		hola = True;
-		c += 10 *5+10 
-		hello += "holalalala"
-		jaja = "sjsjs"
-	}while(index <= 10);
 }

@@ -2,5 +2,4 @@ Tener instalado python 3.5 en adelante
 1.- introducir el codigo fuente en el archivo input.txt
 2.- correr el programa de python
 3.- ver el resultado en el archivo code.txt
-(nota:  -identar bien el codigo con la tecla tab y no con espacios,
-	-Comentario de codigo solo de una sola linea ejem '// comentario' y en una sola linea 
+(nota: Comentario de codigo solo de una sola linea ejem '// comentario' y en una sola linea
